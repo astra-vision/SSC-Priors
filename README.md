@@ -8,4 +8,5 @@ Tetiana Martyniuk, Jonathan Seele, Alexandre Boulch, Gilles Puy, Renaud Marlet, 
 IEEE ICIP 2026
 ```
 
-Code is coming soon, stay tuned!
+Code and the arXiv version of the paper are coming soon, stay tuned!
+Give this repo a star and hit the Watch button to be notified about any updates.
