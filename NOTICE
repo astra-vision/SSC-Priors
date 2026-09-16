@@ -1,0 +1,37 @@
+SSC-Priors
+Copyright (c) 2026 Valeo
+
+This product is licensed under the Apache License, Version 2.0 (see License.txt).
+
+This product includes software and configuration derived from third-party
+open-source projects. Each component remains under its own license; the full
+license texts are provided in the licenses/ directory and summarized in
+THIRD-PARTY-NOTICES.txt.
+
+  - SemCity (https://github.com/zoomin-lee/SemCity)
+    Copyright (c) 2024 Jumin Lee — MIT License.
+    Derived in: models/networks.py, models/blocks.py, data/semantic_kitti.py,
+    data/query.py, train.py.
+
+  - Lovász-Softmax (https://github.com/bermanmaxim/LovaszSoftmax),
+    incorporated via Cylinder3D (https://github.com/xinge008/Cylinder3D).
+    Copyright (c) 2018 Maxim Berman — MIT License.
+    Copyright 2020-2021 Xinge ZHU. All rights reserved. — Apache License 2.0.
+    Derived in: losses.py.
+
+  - WaffleIron (https://github.com/valeoai/WaffleIron)
+    Copyright 2022 Valeo Comfort and Driving Assistance — Apache License 2.0.
+    Derived in: tools/generate_waffleiron_labels.py (inference loop).
+
+  - SemanticKITTI development kit (https://github.com/PRBonn/semantic-kitti-api)
+    Copyright (c) 2019, University of Bonn — MIT License.
+    Derived in: data/semantic-kitti.yaml; evaluation-masking convention in
+    metrics.py.
+
+This product is trained and evaluated on the SemanticKITTI dataset
+(http://www.semantic-kitti.org/), which is licensed under
+CC BY-NC-SA 4.0 (non-commercial, share-alike). The dataset is not redistributed
+here. The pretrained checkpoints released with this project are adaptations of
+that dataset and are made available under CC BY-NC-SA 4.0 for non-commercial
+research use only — see README.md (License section) and
+licenses/SemanticKITTI-dataset-CC-BY-NC-SA-4.0.txt.

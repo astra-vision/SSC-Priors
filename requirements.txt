@@ -1,0 +1,9 @@
+# Tested with Python 3.10. Install PyTorch first so that its build matches your CUDA
+# version (see README); the released models were trained with torch==2.1.0 (CUDA 11.8).
+# scipy is only needed by WaffleIron (pseudo-label generation).
+
+numpy==1.26.4
+scipy==1.11.4
+pyyaml>=6.0
+tqdm>=4.65
+tensorboard>=2.14

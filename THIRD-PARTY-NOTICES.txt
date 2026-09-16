@@ -1,0 +1,123 @@
+========================================================================
+Valeo Third-Party Software Notices
+========================================================================
+
+This package (SSC-Priors) is Copyright (c) 2026 Valeo, released under the
+Apache License, Version 2.0 (see License.txt).
+
+It contains code and libraries developed by third parties. Valeo gratefully
+acknowledges the use of the following components. Each component remains
+under its own license; the texts referenced below govern its use. Verbatim
+copies of the third-party license texts are provided in the licenses/
+directory, and an attribution summary is provided in the NOTICE file.
+
+Note on the pretrained checkpoints: the SemanticKITTI dataset used to train and
+evaluate this project is licensed under CC BY-NC-SA 4.0 (non-commercial). The
+released checkpoints are therefore adaptations of CC BY-NC-SA 4.0 material and
+are distributed under CC BY-NC-SA 4.0 for non-commercial research use only (see
+item 12 and the License section of README.md), even though the source code is
+Apache-2.0.
+
+------------------------------------------------------------------------
+A. Source code incorporated or derived in this repository
+------------------------------------------------------------------------
+
+1. Component Name: SemCity
+   Source:    https://github.com/zoomin-lee/SemCity
+   Copyright: Copyright (c) 2024 Jumin Lee
+   License:   MIT License (see licenses/SemCity-MIT.txt)
+   Notes:     The triplane autoencoder (models/networks.py, models/blocks.py),
+              parts of the SemanticKITTI data pipeline (data/semantic_kitti.py,
+              data/query.py) and of the training loop (train.py) are derived
+              from this codebase. The SSCMetrics evaluator in metrics.py is an
+              original implementation built from standard confusion-matrix IoU
+              definitions.
+
+2. Component Name: Lovasz-Softmax loss
+   Source:    https://github.com/bermanmaxim/LovaszSoftmax
+              (incorporated via https://github.com/xinge008/Cylinder3D)
+   Copyright: Copyright (c) 2018 Maxim Berman; Copyright 2020-2021 Xinge ZHU. All rights reserved.
+   License:   MIT License (LovaszSoftmax); Apache License 2.0 (Cylinder3D)
+              (see licenses/LovaszSoftmax-MIT.txt and
+              licenses/Cylinder3D-Apache-2.0.txt)
+   Notes:     losses.py is derived from these implementations.
+
+3. Component Name: WaffleIron
+   Source:    https://github.com/valeoai/WaffleIron
+   Copyright: Copyright 2022 Valeo
+   License:   Apache License 2.0
+   Notes:     Used to generate the per-point semantic pseudo-labels for the
+              semantic prior. WaffleIron itself is not bundled in this
+              repository; the user clones it separately.
+              tools/generate_waffleiron_labels.py imports it and its inference
+              loop follows WaffleIron's eval_kitti.py.
+
+4. Component Name: SemanticKITTI API / configuration
+   Source:    https://github.com/PRBonn/semantic-kitti-api
+   Copyright: Copyright (c) 2019, University of Bonn
+   License:   MIT License (see licenses/semantic-kitti-api-MIT.txt)
+   Notes:     data/semantic-kitti.yaml (class definitions and learning map)
+              originates from the SemanticKITTI development kit. This MIT
+              license covers the dev-kit *code* only; the SemanticKITTI
+              *dataset* is licensed separately (see item 13).
+
+------------------------------------------------------------------------
+B. Third-party Python packages (runtime dependencies, see requirements.txt)
+------------------------------------------------------------------------
+
+5. Component Name: PyTorch (torch)
+   Source:    https://github.com/pytorch/pytorch
+   Copyright: Copyright (c) 2016- Facebook, Inc (Adam Paszke) and the PyTorch contributors
+   License:   BSD-3-Clause
+
+6. Component Name: NumPy
+   Source:    https://github.com/numpy/numpy
+   Copyright: Copyright (c) 2005-2025, NumPy Developers
+   License:   BSD-3-Clause
+
+7. Component Name: SciPy
+   Source:    https://github.com/scipy/scipy
+   Copyright: Copyright (c) 2001-2002 Enthought, Inc.; 2003- SciPy Developers
+   License:   BSD-3-Clause
+
+8. Component Name: PyYAML
+   Source:    https://github.com/yaml/pyyaml
+   Copyright: Copyright (c) 2017-2021 Ingy döt Net; Copyright (c) 2006-2016 Kirill Simonov
+   License:   MIT License
+
+9. Component Name: tqdm
+    Source:    https://github.com/tqdm/tqdm
+    Copyright: Copyright (c) 2013 noamraph and the tqdm developers
+    License:   MPL-2.0 and MIT License (dual-licensed)
+
+10. Component Name: TensorBoard
+    Source:    https://github.com/tensorflow/tensorboard
+    Copyright: Copyright 2017 The TensorFlow Authors. All rights reserved.
+    License:   Apache License 2.0
+
+------------------------------------------------------------------------
+C. Datasets and released artifacts
+------------------------------------------------------------------------
+
+11. Component Name: SemanticKITTI dataset
+    Source:    http://www.semantic-kitti.org/
+    Copyright: (c) the SemanticKITTI authors / University of Bonn
+    License:   CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike)
+               (see licenses/SemanticKITTI-dataset-CC-BY-NC-SA-4.0.txt)
+    Notes:     The dataset (LiDAR scans, point labels, voxel GT) is the
+               training/evaluation data for this project. It is NOT bundled in
+               this repository; it is downloaded separately by the user. This
+               license is NON-COMMERCIAL and ShareAlike, and is distinct from
+               the MIT-licensed SemanticKITTI dev-kit code (item 4).
+
+12. Component Name: Pretrained checkpoints (released via GitHub Releases)
+    Source:    this repository's Releases page
+    Copyright: Copyright (c) 2026 Valeo
+    License:   CC BY-NC-SA 4.0 (non-commercial research use only)
+    Notes:     The checkpoints are trained on the SemanticKITTI dataset (item 11)
+               and are therefore adaptations of CC BY-NC-SA 4.0 material. They
+               are released for non-commercial research use only and may not be
+               used commercially. This is separate from the Apache-2.0 license
+               that covers the source code in this repository.
+
+========================================================================

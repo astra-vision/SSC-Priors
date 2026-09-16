@@ -1,0 +1,31 @@
+SemanticKITTI dataset
+http://www.semantic-kitti.org/
+
+The SemanticKITTI dataset (LiDAR scans, point labels, voxel ground truth) is
+NOT distributed in this repository; it is downloaded separately by the user.
+However, it is the training/evaluation data for this project, and the released
+pretrained checkpoint is a derivative (adaptation) of it. Its license therefore
+governs that checkpoint and any predictions derived from the dataset.
+
+License: Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+         International (CC BY-NC-SA 4.0)
+
+Key terms:
+  - Attribution    — you must give appropriate credit and indicate if changes
+                     were made.
+  - NonCommercial  — you may NOT use the material for commercial purposes.
+  - ShareAlike     — if you remix, transform, or build upon the material, you
+                     must distribute your contributions under the same license
+                     as the original.
+
+The dataset is built on the KITTI Vision Benchmark, which uses the same
+licensing approach.
+
+Full legal text:
+    https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
+Human-readable summary (deed):
+    https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+Please cite the SemanticKITTI papers as requested at
+http://www.semantic-kitti.org/ when using the dataset or artifacts derived
+from it.
