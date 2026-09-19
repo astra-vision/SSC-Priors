@@ -2,8 +2,8 @@
 
 # SSC-Priors: Semantic and Visibility Priors for Lidar Semantic Scene Completion
 
-[![ICIP paper](https://img.shields.io/badge/arXiv-2606.03992-brightgreen)](https://arxiv.org/abs/2606.03992)
-[![Extension](https://img.shields.io/badge/arXiv-2609.17413-brightgreen)](https://arxiv.org/abs/2609.17413)
+[![ICIP paper](https://img.shields.io/badge/arXiv-ICIP-brightgreen)](https://arxiv.org/abs/2606.03992)
+[![Extension](https://img.shields.io/badge/arXiv-Extension-brightgreen)](https://arxiv.org/abs/2609.17413)
 [![Conference](https://img.shields.io/badge/IEEE_ICIP-2026-blue)](https://2026.ieeeicip.org/)
 
 </div>
